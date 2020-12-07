@@ -1010,13 +1010,10 @@ const findSeatIDByBoardingPass = boardingPass => {
 
 const calcualteSeatID = (row, column) => (row * 8) + column;
 
-console.log(boardingPasses.length)
 const seatIDS = boardingPasses.map(pass => {
     const { row, column } = findSeatIDByBoardingPass(pass);
-    // console.log('ROW', row)
     const seatID = calcualteSeatID(row, column);
-    // console.log('seatID', seatID);
-    return seatID
+    return seatID;
 });
 
 console.log(Math.max(...seatIDS))
